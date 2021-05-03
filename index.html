@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <link rel="stylesheet" href="greet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+
+        </div>
+        <label for="greetings"><H1>Greetings</H1></label>
+        <div class="main">
+            <div class="row enterName">
+                <div class="col-6 lab">
+                    <label for="name"><h4>Name</h4></label> 
+                </div>
+                <div class="col-6 nameInput">
+                    <input type="text" name="name" class="enteredName" required> 
+                    <span class="counter">0</span>
+                </div>
+            </div>
+            <div>
+                <label for="message" class="message"> .</label>           
+            </div>
+            
+           <div class="row languages">
+               <div class="col-4">
+                <input type="radio" name="selectedLanguage" class="select-language" value="english">
+                <label for="">English</label>
+               </div>
+               <div class="col-4">
+                <input type="radio" name="selectedLanguage" class="select-language" value="afrikaans">
+                <label for="">Afriakaans</label>
+               </div>
+               <div class="col-4">
+                <input type="radio" name="selectedLanguage" class="select-language" value="setswana">
+               <label for="">Setswana</label>
+               </div>
+                              
+           </div>
+           <button class="button-primary greetingsBtn">Greeting Me</button>
+
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+    <script src="factory/greetingFactory.js" charset="utf-8"></script>
+    <script src="greetings/greet.js" charset="utf-8"></script>
+</body>
+</html>
