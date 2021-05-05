@@ -29,15 +29,20 @@ function greetingsFactory(){
         if(greetName[theName.trim()] == undefined && theName !=''){
             greetName[theName.trim()] = 0;
             Number(counter++) 
-        }
+        } 
         else {
             if(!greetName[theName.trim()]){
                 greetName[theName.trim()]++ 
                              
             }            
         }
+        if(!theName){
+            return "Please enter name"
+        }
 
-
+        else if (!language){
+            return 'Please select language'
+        }
         if(language === 'english' && theName !== ''){
             return 'Hello'+', '+theName    
         }
@@ -46,12 +51,6 @@ function greetingsFactory(){
         }
         else if(language === 'setswana' && theName !== ''){
             return 'Dumela'+', '+theName
-        }
-        else if (language === 'english' | language === 'afrikaans' | language === 'setswana' && theName === ''){
-            return 'You have not entered the name'
-        }
-        else {
-            return 'Please select language'
         }
         
     }
