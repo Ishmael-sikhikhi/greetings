@@ -26,13 +26,14 @@ function greetingsFactory(){
 
     function setLanguage(language,theName){
         
-        if(greetName[theName] == undefined){
-            greetName[theName] = 0;
-            Number(counter++)
+        if(greetName[theName.trim()] == undefined && theName !=''){
+            greetName[theName.trim()] = 0;
+            Number(counter++) 
         }
         else {
-            if(!greetName[theName]){
-                greetName[theName]++               
+            if(!greetName[theName.trim()]){
+                greetName[theName.trim()]++ 
+                             
             }            
         }
 
