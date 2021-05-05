@@ -20,10 +20,14 @@ function greetings(){
     // factoryInstance.collectNames()
 
     greetingsMessageElement.innerHTML = factoryInstance.setLanguage(selectLanguage,nameElement.value)
-    
+    clearText()
     theCounter.innerHTML = factoryInstance.countNames()
     localStorage = JSON.stringify(setItem(key, factoryInstance.setObject(nameElement.value)))
 
+}
+
+function clearText(){
+    // nameElement = '';
 }
 
 greetingBtn.addEventListener('click', greetings)

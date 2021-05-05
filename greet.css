@@ -16,10 +16,13 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
+  background-color: aquamarine;
 }
-
 .nameInput{
     padding-top: 25px;
+}
+.languages{
+  width: 500px;
 }
 
 /* ROOT FONT STYLES */
@@ -97,11 +100,12 @@ p {
 /* ==== GRID SYSTEM ==== */
 
 .container {
-  max-width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  grid-auto-rows: 100px;
-  background-color: aqua;
+  grid-auto-rows: 100px;   
+  margin-left: 35%;
+  /* text-align: center; */
 }
 
 .row {
