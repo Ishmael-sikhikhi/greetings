@@ -1,21 +1,43 @@
 function greetingsFactory(){
     var theLanguage = ''
     var counter = 0;
+    
+    var namesArray = []
+    var greetName = {}
     function setName(name){
-        theName = name
+        if (!namesArray.includes(name)) {
+            return namesArray.push(name)
+        } else {
+            return;
+        }
     }
     function getName(){
-        return theName
+        return namesArray
     }
-    function setLanguage(language){
-       theLanguage = language
+    
+    function setObject(name){
+        greetName = name
+    }
+    function getObject(){
+        greetName
     }
 
-    function getLanguage(){
-        return theLanguage
-    }
+   
 
     function setLanguage(language,theName){
+        
+        if(greetName[theName] == undefined){
+            greetName[theName] = 0;
+            Number(counter++)
+        }
+        else {
+            if(!greetName[theName]){
+                greetName[theName]++
+               
+            }            
+        }
+
+
         if(language === 'english' && theName !== ''){
             return 'Hello'+', '+theName    
         }
@@ -35,12 +57,7 @@ function greetingsFactory(){
     }
 
     function countNames(){
-        if(getName() != ''){
-            return ++counter
-        }
-        else{
-            return counter
-        }
+        return  counter
     }
 
     function greetingsMessage(){
@@ -54,6 +71,7 @@ function greetingsFactory(){
         greetingsMessage,
         countNames,
         setLanguage,
-        getLanguage
+        setObject,
+        getObject
     }
 }
