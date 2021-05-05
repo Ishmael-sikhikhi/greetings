@@ -21,8 +21,8 @@ function greetings(){
     greetingsMessageElement.innerHTML = factoryInstance.setLanguage(selectLanguage,nameElement.value)
     
     theCounter.innerHTML = factoryInstance.countNames()
-    myObj[factoryInstance.setLanguage(selectLanguage,nameElement.value)]
-    console.log(myObj);
+    // myObj[factoryInstance.setLanguage(selectLanguage,nameElement.value)]
+    // console.log(myObj);
 }
 
 
