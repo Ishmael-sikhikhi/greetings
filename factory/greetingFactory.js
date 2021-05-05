@@ -32,8 +32,7 @@ function greetingsFactory(){
         }
         else {
             if(!greetName[theName]){
-                greetName[theName]++
-               
+                greetName[theName]++               
             }            
         }
 
