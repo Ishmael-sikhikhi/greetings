@@ -19,12 +19,14 @@
                     <label for="name"><h4>Name</h4></label> 
                 </div>
                 <div class="col-6 nameInput">
-                    <input type="text" name="name" class="enteredName" required> 
+                    <form>
+                        <input type="text" name="name" class="enteredName" required> 
                     <span class="counter">0</span>
+                    </form>                    
                 </div>
             </div>
             <div>
-                <label for="message" class="message"> .</label>           
+                <label for="message" class="message"></label>           
             </div>
             
            <div class="row languages">
@@ -42,8 +44,15 @@
                </div>
                               
            </div>
-           <button class="button-primary greetingsBtn">Greeting Me</button>
-
+           
+            <div class="row">
+                <div class="col-6">
+                    <button class="button-primary greetingsBtn">Greeting Me</button>
+                </div>.
+                <div class="col-6">
+                    <button class="button-primary resettingBtn">Reset</button>
+                </div>
+            </div>
         </div>
         <div class="footer">
 

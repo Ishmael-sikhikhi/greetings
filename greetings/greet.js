@@ -4,27 +4,39 @@ let greetingsMessageElement = document.querySelector('.message')
 var theCounter = document.querySelector(".counter")
 
 let factoryInstance = greetingsFactory()
+var selectLanguage = ''
+var myObj = {}
+
 function greetings(){
-    var myObj = {}
+    
 
     var checkedRadioBtn = document.querySelector("input[name='selectedLanguage']:checked")
-    // localStorage.
-        
+   
     if (checkedRadioBtn){
-         var selectLanguage = checkedRadioBtn.value
-        // factoryInstance.setName(nameElement.value) 
-    //     factoryInstance.setLanguage(selectLanguage)
-    }
-    
-    // factoryInstance.collectNames()
+         selectLanguage = checkedRadioBtn.value
+       
+    } 
 
-    greetingsMessageElement.innerHTML = factoryInstance.setLanguage(selectLanguage,nameElement.value)
+   greetingsMessageElement.innerHTML = factoryInstance.setLanguage(selectLanguage,nameElement.value)
+    objectFill()
     
-    theCounter.innerHTML = factoryInstance.countNames()
-    // myObj[factoryInstance.setLanguage(selectLanguage,nameElement.value)]
-    // console.log(myObj);
+    resetEle()    
+    
 }
 
+function objectFill(){   
+    let key = 'name' 
+    myObj=factoryInstance.obj()
+    localStorage.setItem('name', JSON.stringify(myObj));
+    let myStorage = JSON.parse(localStorage['name']);
+    localStorage.getItem('name', myStorage)
+    theCounter.innerHTML = Object.keys(myStorage).length
+    
+    return myStorage    
+}
+function resetEle(){
+    return nameElement.value = ''
 
+}
 
 greetingBtn.addEventListener('click', greetings)

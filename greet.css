@@ -19,6 +19,14 @@ body {
   background-color: violet;
   
 }
+
+button{
+  border-radius:8px;
+  background-color: rgb(1, 4, 24);
+  color: #fff;
+  padding: 0;
+  margin: auto;
+  }
 .nameInput{
     padding-top: 25px;
 }

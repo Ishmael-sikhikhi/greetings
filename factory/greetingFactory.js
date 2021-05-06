@@ -27,11 +27,12 @@ function greetingsFactory(){
     function setLanguage(language,theName){
         
         if(greetName[theName.trim()] == undefined && theName !=''){
+            
             greetName[theName.trim()] = 0;
             Number(counter++) 
         } 
         else {
-            if(!greetName[theName.trim()]){
+            if(!greetName[theName.trim()] && theName !=''){
                 greetName[theName.trim()]++ 
                              
             }            
@@ -63,6 +64,9 @@ function greetingsFactory(){
         return setLanguage(language) + ', ' + getName();
     }
 
+    function obj(){
+        return greetName;
+    }
     return{
         setName,
         getName,
@@ -71,6 +75,7 @@ function greetingsFactory(){
         countNames,
         setLanguage,
         setObject,
-        getObject
+        getObject,
+        obj
     }
 }
