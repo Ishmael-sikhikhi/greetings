@@ -25,7 +25,7 @@ function greetingsFactory(){
    
 
     function setLanguage(language,theName){
-        
+        theName = theName.charAt(0).toUpperCase() + theName.slice(1)
         if(greetName[theName.trim()] == undefined && theName !=''){
             
             greetName[theName.trim()] = 0;
