@@ -1,9 +1,9 @@
 function greetingsFactory(){
     var theLanguage = ''
-    var counter = 0;
-    
+    var counter = 0;    
     var namesArray = []
     var greetName = {}
+    const regex = /[a-zA-z]/
     function setName(name){
         if (!namesArray.includes(name)) {
             return namesArray.push(name)
@@ -25,8 +25,13 @@ function greetingsFactory(){
    
 
     function setLanguage(language,theName){
+        if (theName.match(regex)){
         theName = theName.charAt(0).toUpperCase() + theName.slice(1)
-        if(greetName[theName.trim()] == undefined && theName !=''){
+        }
+        else{
+            return "Name must accommodate letters"
+        }
+        if(greetName[theName.trim()] == undefined && theName !='' && theName.match(regex)){
             
             greetName[theName.trim()] = 0;
             Number(counter++) 
@@ -54,6 +59,10 @@ function greetingsFactory(){
             return 'Dumela'+', '+theName
         }
         
+    }
+    function validate(name){
+        let objectValidate = '("[A-Z][a-zA-Z]*")'
+        return objectValidate.test(name);
     }
 
     function countNames(){
