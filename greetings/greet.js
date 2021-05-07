@@ -2,6 +2,7 @@ let nameElement = document.querySelector('.enteredName')
 let greetingBtn = document.querySelector('.greetingsBtn')
 let greetingsMessageElement = document.querySelector('.message')
 var theCounter = document.querySelector(".counter")
+let storedNames = document.querySelector(".storage")
 
 let factoryInstance = greetingsFactory()
 var selectLanguage = ''
@@ -31,6 +32,7 @@ function objectFill(){
     let myStorage = JSON.parse(localStorage['name']);
     localStorage.getItem('name', myStorage)
     theCounter.innerHTML = Object.keys(myStorage).length
+    storedNames.innerHTML = Object.keys(myStorage)
     
     return myStorage    
 }
