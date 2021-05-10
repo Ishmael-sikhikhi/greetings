@@ -1,28 +1,18 @@
-function greetingsFactory(){
+function greetingsFactory(exist){
     var theLanguage = ''
     var counter = 0;    
     var namesArray = []
-    var greetName = {}
+    var greetName = exist || {} 
     const regex = /[a-zA-z]/
-    function setName(name){
-        if (!namesArray.includes(name)) {
-            return namesArray.push(name)
-        } else {
-            return;
-        }
-    }
-    function getName(){
-        return namesArray
-    }
-    
-    function setObject(name){
-        greetName = name
+       
+    function setObject(name, exist){
+        greetName = name || exist
     }
     function getObject(){
         greetName
     }
+    
 
-   
 
     function setLanguage(language,theName){
         if (theName.match(regex)){
@@ -34,13 +24,16 @@ function greetingsFactory(){
         if(greetName[theName.trim()] == undefined && theName !='' && theName.match(regex)){
             
             greetName[theName.trim()] = 0;
-            Number(counter++) 
+            
         } 
         else {
             if(!greetName[theName.trim()] && theName !=''){
                 greetName[theName.trim()]++ 
                              
             }            
+        }
+        for(var name in greetName){
+            var count = greetName[name];
         }
         if(!theName){
             return "Please enter name"
@@ -66,7 +59,7 @@ function greetingsFactory(){
     }
 
     function countNames(){
-        return  counter
+        return  Object.keys(greetName).length
     }
 
     function greetingsMessage(){
@@ -74,11 +67,9 @@ function greetingsFactory(){
     }
 
     function obj(){
-        return greetName;
+        return greetName 
     }
     return{
-        setName,
-        getName,
         setLanguage,
         greetingsMessage,
         countNames,

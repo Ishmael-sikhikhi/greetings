@@ -2,9 +2,17 @@ let nameElement = document.querySelector('.enteredName')
 let greetingBtn = document.querySelector('.greetingsBtn')
 let greetingsMessageElement = document.querySelector('.message')
 var theCounter = document.querySelector(".counter")
-let storedNames = document.querySelector(".storage")
+let storedNames = document.querySelector(".storedNames")
 var checkedRadioBtn = ''
-let factoryInstance = greetingsFactory()
+
+let myLocal
+if(localStorage['name']){
+     myLocal = JSON.parse(localStorage.getItem('name'))
+}
+
+
+
+let factoryInstance = greetingsFactory(myLocal)
 var selectLanguage = ''
 var myObj = {}
 
@@ -20,27 +28,23 @@ function greetings(){
    greetingsMessageElement.innerHTML = factoryInstance.setLanguage(selectLanguage,nameElement.value)
     objectFill()
     
-    resetEle()   
-    
+    resetEle()       
     
 }
 
 
 function objectFill(){   
-    let key = 'name' 
-    myObj=factoryInstance.obj()
-    localStorage.setItem('name', JSON.stringify(myObj));
-    let myStorage = JSON.parse(localStorage['name']);
-    localStorage.getItem('name', myStorage)
-    theCounter.innerHTML = Object.keys(myStorage).length
-    storedNames.innerHTML = Object.keys(myStorage)
     
-    return myStorage    
+    // myObj=factoryInstance.obj()
+    localStorage.setItem('name', JSON.stringify(factoryInstance.obj()))    
+    theCounter.innerHTML = factoryInstance.countNames();
+    storedNames.innerHTML = Object.keys(factoryInstance.obj())
 }
 function resetEle(){
     return nameElement.value = ''
     
 }
+theCounter.innerHTML = factoryInstance.countNames();
 var clearSelectionBtn = 
  
 greetingBtn.addEventListener('click', greetings)
