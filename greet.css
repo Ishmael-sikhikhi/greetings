@@ -16,7 +16,7 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background-color: violet;
+  background-color: rgb(171, 236, 245);
   
 }
 
@@ -106,18 +106,19 @@ p {
 
 .justify {
   text-align: justify;
-}
+}+
 .enteredName{
   clear: both;
 }
 /* ==== GRID SYSTEM ==== */
 
 .container {
+  background-color: azure;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  grid-auto-rows: 100px;   
-  margin-left: 40%;
+  /* margin-right: 30%; */
+  /* margin-right: ; */
+  /* grid-auto-rows: 100px;    */
+  
   /* text-align: center; */
 }
 
@@ -278,4 +279,7 @@ p {
 }
 .lab{
     margin-right: 80%;
+}
+.error{
+  color: crimson;
 }

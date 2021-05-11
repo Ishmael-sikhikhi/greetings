@@ -3,28 +3,24 @@ function greetingsFactory(exist){
     var counter = 0;    
     var namesArray = []
     var greetName = exist || {} 
-    const regex = /[a-zA-z]/
-       
-    function setObject(name, exist){
-        greetName = name || exist
-    }
-    function getObject(){
-        greetName
-    }
+    const regex = /[a-zA-z]/       
     
-
-
     function setLanguage(language,theName){
-        if (theName.match(regex)){
+        //errors when information is not correct
+        if(!language && !theName){
+            return 'Please fill the required fields'
+        }
+        else if (theName.match(regex)){
         theName = theName.charAt(0).toUpperCase() + theName.slice(1)
         }
         else{
             return "Name must accommodate letters"
         }
-        if(greetName[theName.trim()] == undefined && theName !='' && theName.match(regex)){
-            
-            greetName[theName.trim()] = 0;
-            
+        
+        /* object fill or refill */ 
+
+        if(greetName[theName.trim()] == undefined && theName !='' && theName.match(regex)){            
+            greetName[theName.trim()] = 0            
         } 
         else {
             if(!greetName[theName.trim()] && theName !=''){
@@ -32,15 +28,13 @@ function greetingsFactory(exist){
                              
             }            
         }
-        for(var name in greetName){
-            var count = greetName[name];
-        }
+        
         if(!theName){
             return "Please enter name"
         }
 
         else if (!language){
-            return 'Please select language'
+            return 'Please re-enter the name and select language'
         }
         if(language === 'english' && theName !== ''){
             return 'Hello'+', '+theName    
@@ -74,8 +68,6 @@ function greetingsFactory(exist){
         greetingsMessage,
         countNames,
         setLanguage,
-        setObject,
-        getObject,
         obj
     }
 }
