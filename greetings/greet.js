@@ -34,18 +34,72 @@ function greetings(){
         document.getElementById("r2").checked = false;  
     }
     else{
-        if(!name.match(regex) && (selectLanguage || !selectLanguage)){
-            setTimeout(function(){
+        if(!name.match(regex) && (selectLanguage || !selectLanguage) && name != ''){
+            setTimeout(() =>{
                 greetingsMessageElement.innerHTML = 'Error! Name should be in alphabets'
                 greetingsMessageElement.classList.add('error')
                 
             },0)
-            setTimeout(function(){
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = 'Please enter name in letters'
+                greetingsMessageElement.classList.remove('error')                
+            },1000)
+            setTimeout(() =>{
                 greetingsMessageElement.innerHTML = ''
                 greetingsMessageElement.classList.remove('error')
-                
-            },1000)
+                document.getElementById("r").checked = false;
+                document.getElementById("r1").checked = false; 
+                document.getElementById("r2").checked = false;   
+                resetEle()              
+            },3000)
+            
         }
+        else if (!name && !selectLanguage){
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = 'Error! No name and language is not selected!'
+                greetingsMessageElement.classList.add('error')                
+            },0)
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = 'Please enter name in letters and select language'
+                greetingsMessageElement.classList.remove('error')                
+            },1000)
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = ''
+                greetingsMessageElement.classList.remove('error')                             
+            },3000)
+            
+        }
+        else if (!name && selectLanguage){
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = 'Error! Name no entered!'
+                greetingsMessageElement.classList.add('error')                
+            },0)
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = 'Please enter name'
+                greetingsMessageElement.classList.remove('error')                
+            },1000)
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = ''
+                greetingsMessageElement.classList.remove('error')                             
+            },3000)
+            
+        }
+        else if (name && !selectLanguage){
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = 'Error! Language is not selected!'
+                greetingsMessageElement.classList.add('error')                
+            },0)
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = 'Please select language'
+                greetingsMessageElement.classList.remove('error')                
+            },1000)
+            setTimeout(() =>{
+                greetingsMessageElement.innerHTML = ''
+                greetingsMessageElement.classList.remove('error')                             
+            },3000)
+            
+        }
+        
         
     }
 
