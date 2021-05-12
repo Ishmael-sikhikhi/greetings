@@ -51,12 +51,7 @@ function greetings(){
                 document.getElementById("r").checked = false;
                 document.getElementById("r1").checked = false; 
                 document.getElementById("r2").checked = false; 
-                selectLanguage = null
-                if ((document.getElementById("r").checked = false) &&
-                (document.getElementById("r1").checked = false) &&
-                (document.getElementById("r2").checked = false) ){
-                    !selectLanguage
-                }
+                selectLanguage = null                
                 resetEle()              
             },3000)
             
@@ -133,6 +128,14 @@ function resetEle(){
 function resetting(){
     localStorage.clear()	
     location.reload()
+    setTimeout(() =>{
+        greetingsMessageElement.innerHTML = 'Application has been successfully resetted!'
+        greetingsMessageElement.classList.add('good')                
+    },0)
+    setTimeout(() =>{
+        greetingsMessageElement.innerHTML = 'Good'
+        greetingsMessageElement.classList.add('good')                             
+    },100)
 } 
 theCounter.innerHTML = factoryInstance.countNames();
 var clearSelectionBtn = 
