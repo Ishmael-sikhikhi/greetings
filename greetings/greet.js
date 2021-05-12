@@ -31,7 +31,8 @@ function greetings(){
         objectFill()
         document.getElementById("r").checked = false;
         document.getElementById("r1").checked = false; 
-        document.getElementById("r2").checked = false;  
+        document.getElementById("r2").checked = false; 
+        selectLanguage = null
     }
     else{
         if(!name.match(regex) && (selectLanguage || !selectLanguage) && name != ''){
@@ -49,7 +50,13 @@ function greetings(){
                 greetingsMessageElement.classList.remove('error')
                 document.getElementById("r").checked = false;
                 document.getElementById("r1").checked = false; 
-                document.getElementById("r2").checked = false;   
+                document.getElementById("r2").checked = false; 
+                selectLanguage = null
+                if ((document.getElementById("r").checked = false) &&
+                (document.getElementById("r1").checked = false) &&
+                (document.getElementById("r2").checked = false) ){
+                    !selectLanguage
+                }
                 resetEle()              
             },3000)
             
@@ -99,6 +106,8 @@ function greetings(){
             },3000)
             
         }
+        else
+            return
         
         
     }

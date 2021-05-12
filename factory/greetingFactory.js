@@ -8,9 +8,9 @@ function greetingsFactory(exist){
     function setLanguage(language,theName){
         //errors when information is not correct
         if(!language && !theName){
-            return 'Please fill the required fields'
+            return 
         }
-        else if (theName.match(regex)){
+        else if (theName.match(regex) && language){
         theName = theName.charAt(0).toUpperCase() + theName.slice(1)
         }
         else{
