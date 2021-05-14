@@ -3,7 +3,7 @@ function greetingsFactory(exist){
     var counter = 0;    
     var namesArray = []
     var greetName = exist || {} 
-    const regex = /[a-zA-z]/       
+    const regex = /[a-zA-Z]/       
     
     function setLanguage(language,theName){
         //errors when information is not correct
@@ -24,9 +24,8 @@ function greetingsFactory(exist){
         } 
         else {
             if(!greetName[theName.trim()] && theName !=''){
-                greetName[theName.trim()]++ 
-                             
-            }            
+                greetName[theName.trim()]++                              
+            }         
         }
         
         if(!theName){

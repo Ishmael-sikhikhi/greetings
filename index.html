@@ -8,64 +8,63 @@
     <link rel="stylesheet" href="greet.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="container"> 
+        <div class="inContainer">
+            <div class="box">
+                <div class="header">
 
-        </div>
-        <label for="greetings"><H1 class="myheading">Greetings</H1></label>
-        <div class="main">
-            <div class="row enterName">
-                <div class="col-6 lab">
-                    <label for="name"><h4>Name</h4></label> 
                 </div>
-                <div class="col-6 nameInput">
-                    <form>
-                        <input type="text" name="name" class="enteredName" required> 
-                        <label for="count" style="font-size: large;">Counter</label>
-                        <span class="counter">0</span>
-                    </form>                    
+                <label for="greetings"><H1 class="myheading">Greetings</H1></label>
+                <div class="main">
+                    <div class="enterName">
+                        <div class="">
+                            <label for="name"><h4>Name</h4></label> 
+                        </div>
+                        <div class="nameInput">
+                            <form>
+                                <input type="text" name="name" class="enteredName" required>                                 
+                            </form>                    
+                        </div>                        
+                    </div>
+                    <div><label for="count" style="font-size: large;">Counter</label>
+                        <span class="counter">0</span></div>
+                    <div class="behind">
+                        <label for="message" class="message"></label>           
+                    </div>
+                    
+                <div class="languages">
+                    <div class="">
+                        <input type="radio" id="r"  name="selectedLanguage" class="select-language" value="english">
+                        <label for="">English</label>
+                    </div>
+                    <div class="">
+                        <input type="radio" id="r1"  name="selectedLanguage" class="select-language" value="afrikaans">
+                        <label for="">Afriakaans</label>
+                    </div>
+                    <div class="">
+                        <input type="radio" id="r2" name="selectedLanguage" class="select-language" value="setswana">
+                    <label for="">Setswana</label>
+                    </div>
+                                    
                 </div>
                 
-            </div>
-            <div>
-                <label for="message" class="message"></label>           
-            </div>
-            
-           <div class="row languages">
-               <div class="col-4">
-                <input type="radio" id="r"  name="selectedLanguage" class="select-language" value="english">
-                <label for="">English</label>
-               </div>
-               <div class="col-4">
-                <input type="radio" id="r1"  name="selectedLanguage" class="select-language" value="afrikaans">
-                <label for="">Afriakaans</label>
-               </div>
-               <div class="col-4 justify">
-                <input type="radio" id="r2" name="selectedLanguage" class="select-language" value="setswana">
-               <label for="">Setswana</label>
-               </div>
-                              
-           </div>
-           
-            <div class="row">
-                <div class="col-6 ">
-                    <button class="button-primary greetingsBtn">Greeting Me</button>
-                </div>.
-                <div class="col-6">
-                    <button class="button-primary resettingBtn">Reset</button>
+                    <div class="buttons">
+                        <div class="">
+                            <button class="button-primary greetingsBtn">Greeting Me</button>
+                        </div>.
+                        <div class="reset">
+                            <button class="button-primary resettingBtn">Reset</button>
+                        </div>
+                    </div>
+                    <div class="row">                        
+                        <div class="">
+                            <label for="message" class="storedNames"></label> 
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-5">
-                    <label for=""></label>
-                </div>
-                <div class="col-7">
-                    <label for="message" class="storedNames"></label> 
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-
         </div>
     </div>
     <script src="factory/greetingFactory.js" charset="utf-8"></script>

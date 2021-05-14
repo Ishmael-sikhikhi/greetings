@@ -16,7 +16,8 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background-color: rgb(171, 236, 245);
+  background-color: #101820ff;
+  overflow: hidden;
   
 }
 
@@ -106,22 +107,57 @@ p {
 
 .justify {
   text-align: justify;
-}+
+}
 .enteredName{
   clear: both;
 }
+
 /* ==== GRID SYSTEM ==== */
 
 .container {
-  background-color: azure;
-  width: 100%;
-  /* margin-right: 30%; */
-  /* margin-right: ; */
-  /* grid-auto-rows: 100px;    */
-  
-  /* text-align: center; */
+  margin-top: 10%;
+  border-radius: 50%;
+  width: 80%;
+  border:solid #fcf951ff;
+  background-color: yellow; 
+  margin-left: 10%;
+  margin-right: 10%;
 }
-
+.inContainer{  
+  width: 65%;
+  border-radius: 25%;
+  background-color: #00b1d2ff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 17.5%;
+  border: solid #fcf951ff;
+}
+.enterName{
+  display: flex;
+}
+.buttons{
+  display: flex;  
+}
+.nameInput{
+ margin-left: 15%;
+}
+.behind{
+  background-color: #fff;  
+  margin-right: 10%;
+}
+.storedNames{  
+  margin:0 0;
+}
+.reset{
+  margin-left: 30%;
+}
+.box{
+  margin-left: 30%;  
+}
+.languages{
+  display: flex;
+  width: 100%;
+}
 .row {
   position: relative;
   width: 40%;
@@ -132,6 +168,7 @@ p {
   margin: 0.5rem 2%;
   min-height: 0.125rem;
 }
+
 
 .col-1,
 .col-2,
@@ -288,4 +325,112 @@ p {
 }
 .good{
   color: green;
+}
+@media (min-width:662px){
+  .container {
+    margin-top: 10%;
+    border-radius: 50%;
+    width: 80%;
+    border:solid #fcf951ff;
+    background-color: yellow; 
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .inContainer{  
+    width: 65%;
+    border-radius: 25%;
+    background-color: #00b1d2ff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 17.5%;
+    border: solid #fcf951ff;
+  }
+  
+}
+@media (max-width:662px){
+  .container {
+    margin-top: 10%;
+    border-radius: 50%;
+    width: 80%;    
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .inContainer{  
+    width: 65%;
+    border-radius: 0%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 17.5%;
+  }
+  .buttons{
+    display: flex;  
+    flex-direction: column;
+  }
+  .enterName{
+    display: flex;
+    flex-direction: column;
+  }
+  .languages{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nameInput{
+    margin:0 0 20px 0;
+   }
+   .behind{ 
+    margin-right: 10%;
+  }
+  /* .storedNames{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font: bolder;
+    font-weight: 500;
+  } */
+}
+@media (min-width: 992px){
+  .container {
+    margin-top: 10%;
+    border-radius: 50%;
+    width: 80%;
+    border:solid #fcf951ff;
+    background-color: yellow; 
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .inContainer{  
+    width: 65%;
+    border-radius: 25%;
+    background-color: #00b1d2ff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 17.5%;
+    border: solid #fcf951ff;
+  }
+  .enterName{
+    display: flex;
+  }
+  .buttons{
+    display: flex;  
+  }
+  .nameInput{
+   margin-left: 15%;
+  }
+  .behind{
+    background-color: #fff;  
+    margin-right: 10%;
+  }
+  .storedNames{  
+    margin:0 0;
+  }
+  .reset{
+    margin-left: 30%;
+  }
+  .box{
+    margin-left: 30%;  
+  }
+  .languages{
+    display: flex;
+    width: 100%;
+  }
 }
