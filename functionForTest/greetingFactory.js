@@ -1,14 +1,14 @@
-function greetingsFactory(exist){
+function greetingsFactory(){
     var theLanguage = ''
     var counter = 0;    
     var namesArray = []
-    var greetName = exist || {} 
+    var greetName = {} 
     const regex = /[a-zA-Z]/       
     
     function setLanguage(language,theName){
         //errors when information is not correct
         if(!language && !theName){
-            return 
+            return 'Please enter the name and select language' 
         }
         else if (theName.match(regex) && language){
         theName = theName.charAt(0).toUpperCase() + theName.slice(1).toLowerCase()
@@ -33,7 +33,7 @@ function greetingsFactory(exist){
         }
 
         else if (!language){
-            return 'Please re-enter the name and select language'
+            return 'Please select language'
         }
         if(language === 'english' && theName !== ''){
             return 'Hello'+', '+theName    

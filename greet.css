@@ -142,8 +142,7 @@ p {
 .nameInput{
  margin-left: 15%;
 }
-.behind{
-  background-color: #fff;  
+.behind{ 
   margin-right: 10%;
 }
 .storedNames{  
@@ -377,7 +376,9 @@ p {
 }
 /* 425 */
 @media (max-width:425px) and (min-width: 100px){
+  
   .header{
+    font-size: 1000;
     width: 50%;
     margin: 0 10%;
   }
@@ -394,7 +395,7 @@ p {
   .header{
     width: 50%;
     margin: 0 10%;
-  }
+  }  
   .inContainer{  
     width: 100%;       
   }
@@ -404,7 +405,7 @@ p {
     margin-right: 10%;
   }
 }
-@media (max-width:662px){
+@media (max-width:662px){  
   .container {
     margin-top: 10%;
     border-radius: 50%;
@@ -469,8 +470,7 @@ p {
   .nameInput{
    margin-left: 15%;
   }
-  .behind{
-    background-color: #fff;  
+  .behind{ 
     margin-right: 10%;
   }
   .storedNames{  

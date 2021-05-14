@@ -97,8 +97,13 @@ function objectFill(){
     // myObj=factoryInstance.obj()
     localStorage.setItem('name', JSON.stringify(factoryInstance.obj()))    
     theCounter.innerHTML = factoryInstance.countNames();
-    
-    storedNames.innerHTML = "Greated names: " + "\n" +Object.keys(factoryInstance.obj())
+    var storeVar = Object.keys(factoryInstance.obj())
+    var stores
+    for(var i = 0; i < storeVar.length; i++){
+        stores =  storeVar;
+    }
+    storedNames.innerHTML = stores
+    //  "\n" +Object.keys(factoryInstance.obj())
 }
 function resetEle(){
     return nameElement.value = ''    
@@ -116,7 +121,7 @@ function resetting(){
     },100)
 } 
 theCounter.innerHTML = factoryInstance.countNames();
-var clearSelectionBtn = 
+
  
 greetingBtn.addEventListener('click', greetings)
 resettingBtn.addEventListener('click', resetting)
