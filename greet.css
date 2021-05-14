@@ -251,11 +251,21 @@ p {
   .header{
     margin-left: 5%;
   }
+  .box{
+    width: 80%;
+    margin-left: 10%;  
+    margin-right: 10%;
+  }
 }
 
 @media only screen and (min-width: 45em) {  /* 720px */
   .header{
     margin-left: 5%;
+  }
+  .box{
+    width: 80%;
+    margin-left: 10%;  
+    margin-right: 10%;
   }
   .col-1 {
     width: 4.33%;
@@ -318,6 +328,11 @@ p {
   .header{
     margin-left: 5%;
   }
+  .box{
+    width: 80%;
+    margin-left: 10%;  
+    margin-right: 10%;
+  }
 }
 
 .col-4 churchsquare img{
@@ -359,6 +374,21 @@ p {
     margin-left: 5%;
   }
   
+}
+/* 425 */
+@media (max-width:425px) and (min-width: 100px){
+  .header{
+    width: 50%;
+    margin: 0 10%;
+  }
+  .inContainer{  
+    width: 100%;       
+  }
+  .box{
+    width: 80%;
+    margin-left: 0%;  
+    margin-right: 0%;
+  }
 }
 @media (max-width:572px){
   .header{
