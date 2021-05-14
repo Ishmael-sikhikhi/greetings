@@ -96,8 +96,8 @@ p {
 .right {
   text-align: right;
 }
-.myheading{
-  margin-left: 5%;
+.header{
+  margin:0 0;
 }
 .center {
   text-align: center;
@@ -130,6 +130,7 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 17.5%;
+  margin-right: 17.5%;
   border: solid #fcf951ff;
 }
 .enterName{
@@ -247,9 +248,15 @@ p {
   .container {
     width: 80%;
   }
+  .header{
+    margin-left: 5%;
+  }
 }
 
 @media only screen and (min-width: 45em) {  /* 720px */
+  .header{
+    margin-left: 5%;
+  }
   .col-1 {
     width: 4.33%;
   }
@@ -308,6 +315,9 @@ p {
     width: 75%;
     max-width: 60rem;
   }
+  .header{
+    margin-left: 5%;
+  }
 }
 
 .col-4 churchsquare img{
@@ -345,22 +355,37 @@ p {
     margin-left: 17.5%;
     border: solid #fcf951ff;
   }
+  .header{
+    margin-left: 5%;
+  }
   
+}
+@media (max-width:572px){
+  .header{
+    width: 50%;
+    margin: 0 10%;
+  }
+  .inContainer{  
+    width: 100%;       
+  }
+  .box{
+    width: 80%;
+    margin-left: 10%;  
+    margin-right: 10%;
+  }
 }
 @media (max-width:662px){
   .container {
     margin-top: 10%;
     border-radius: 50%;
     width: 80%;    
-    margin-left: 10%;
-    margin-right: 10%;
+    
   }
   .inContainer{  
-    width: 65%;
-    border-radius: 0%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 17.5%;
+    width: 65%;    
+  }
+  .header{
+    margin:0 0;
   }
   .buttons{
     display: flex;  
@@ -381,12 +406,7 @@ p {
    .behind{ 
     margin-right: 10%;
   }
-  /* .storedNames{
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font: bolder;
-    font-weight: 500;
-  } */
+  
 }
 @media (min-width: 992px){
   .container {
@@ -397,6 +417,9 @@ p {
     background-color: yellow; 
     margin-left: 10%;
     margin-right: 10%;
+  }
+  .header{
+    margin-left: 5%;
   }
   .inContainer{  
     width: 65%;
