@@ -113,7 +113,7 @@ p {
 /* ==== GRID SYSTEM ==== */
 
 .container {  
-  width: 80%;    
+  width: 100%;    
   margin-left: 10%;
   margin-right: 10%;
   overflow: hidden;
