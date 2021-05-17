@@ -14,9 +14,6 @@ function greetingsFactory(){
         else if (language && !theName.match(digits)){
         theName = theName.charAt(0).toUpperCase() + theName.slice(1).toLowerCase()
         }
-        else {
-            return "Name must accommodate letters"
-        }
         
         /* object fill or refill */ 
 
