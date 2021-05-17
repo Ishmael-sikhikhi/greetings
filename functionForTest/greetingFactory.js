@@ -3,23 +3,24 @@ function greetingsFactory(){
     var counter = 0;    
     var namesArray = []
     var greetName = {} 
-    const regex = /[a-zA-Z]/       
+    const regex = /[a-zA-Z]/   
+    const digits = /[0-9]/    
     
     function setLanguage(language,theName){
         //errors when information is not correct
         if(!language && !theName){
             return 'Please enter the name and select language' 
         }
-        else if (theName.match(regex) && language){
+        else if (language && !theName.match(digits)){
         theName = theName.charAt(0).toUpperCase() + theName.slice(1).toLowerCase()
         }
-        else{
+        else {
             return "Name must accommodate letters"
         }
         
         /* object fill or refill */ 
 
-        if(greetName[theName.trim()] == undefined && theName !='' && theName.match(regex)){            
+        if(greetName[theName.trim()] == undefined && theName !='' && !theName.match(digits)){            
             greetName[theName.trim()] = 0            
         } 
         else {
@@ -46,10 +47,7 @@ function greetingsFactory(){
         }
         
     }
-    function validate(name){
-        let objectValidate = '("[A-Z][a-zA-Z]*")'
-        return objectValidate.test(name);
-    }
+    
 
     function countNames(){
         return  Object.keys(greetName).length

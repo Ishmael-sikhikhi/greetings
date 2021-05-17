@@ -5,7 +5,8 @@ let greetingsMessageElement = document.querySelector('.message')
 var theCounter = document.querySelector(".counter")
 let storedNames = document.querySelector(".storedNames")
 var checkedRadioBtn = ''
-const regex = /[a-zA-Z]/
+
+const digits = /[0-9]/ 
 let myLocal
 if(localStorage['name']){
      myLocal = JSON.parse(localStorage.getItem('name'))
@@ -24,7 +25,7 @@ function greetings(){
     if (checkedRadioBtn){
          selectLanguage = checkedRadioBtn.value         
     } 
-    if(name.match(regex) && selectLanguage){
+    if(!name.match(digits) && selectLanguage){
         greetingsMessageElement.innerHTML = factoryInstance.setLanguage(selectLanguage,name)   
         resetEle()
         uncheckRadioBtn()
@@ -32,24 +33,27 @@ function greetings(){
         
     }
     else{
-        if(!name.match(regex) && (selectLanguage || !selectLanguage) && name != ''){
+        if((selectLanguage || !selectLanguage) && name != '' && name.match(digits)){
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = 'Error! Name should be in alphabets'
                 greetingsMessageElement.classList.add('error')
-                
+                uncheckRadioBtn()
+                resetEle() 
             },0)
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = ''
                 greetingsMessageElement.classList.remove('error')
                 uncheckRadioBtn()                
-                resetEle()              
+                             
             },3000)
             
         }
         else if (!name && !selectLanguage){
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = 'Error! No name and language is not selected!'
-                greetingsMessageElement.classList.add('error')                
+                greetingsMessageElement.classList.add('error')  
+                uncheckRadioBtn()
+                resetEle()               
             },0)
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = ''
@@ -60,7 +64,9 @@ function greetings(){
         else if (!name && selectLanguage){
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = 'Error! Name no entered!'
-                greetingsMessageElement.classList.add('error')                
+                greetingsMessageElement.classList.add('error') 
+                uncheckRadioBtn() 
+                resetEle()               
             },0)
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = ''
@@ -71,7 +77,9 @@ function greetings(){
         else if (name && !selectLanguage){
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = 'Error! Language is not selected!'
-                greetingsMessageElement.classList.add('error')                
+                greetingsMessageElement.classList.add('error')  
+                uncheckRadioBtn()   
+                resetEle()            
             },0)
             setTimeout(() =>{
                 greetingsMessageElement.innerHTML = ''
@@ -102,8 +110,6 @@ function objectFill(){
     for(var i = 0; i < storeVar.length; i++){
         stores =  storeVar;
     }
-    storedNames.innerHTML = stores
-    //  "\n" +Object.keys(factoryInstance.obj())
 }
 function resetEle(){
     return nameElement.value = ''    

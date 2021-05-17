@@ -14,7 +14,10 @@
             <div class="box">
                 <div class="header">
                     <label for="greetings"><H1 class="myheading">Greetings</H1></label>
-                </div>        
+                </div>  
+                <div class="behind">
+                    <label for="message" class="message"></label>           
+                </div>      
                 <div class="">
                     <div class="enterName">
                         <div class="">
@@ -24,25 +27,24 @@
                             <form>
                                 <input type="text" name="name" class="enteredName" required>                                 
                             </form>                    
-                        </div>                        
-                    </div>
-                    <div><label for="count" style="font-size: large;">Counter</label>
-                        <span class="counter">0</span></div>
-                    <div class="behind">
-                        <label for="message" class="message"></label>           
+                        </div>    
+                        <div class="myCounter"><label for="count" style="font-size: large;">Counter</label>
+                            <span class="counter">0</span></div>                    
                     </div>
                     
-                <div class="languages">
-                    <div class="">
-                        <input type="radio" id="r"  name="selectedLanguage" class="select-language" value="english">
+                    
+                    
+                <div class="row languages">
+                    <div class="col-4">
+                        <input type="radio" id="r"  name="selectedLanguage" class="select-language" value="english" class="radio">
                         <label for="">English</label>
                     </div>
-                    <div class="">
-                        <input type="radio" id="r1"  name="selectedLanguage" class="select-language" value="afrikaans">
-                        <label for="">Afriakaans</label>
+                    <div class="col-4">
+                        <input type="radio" id="r1"  name="selectedLanguage" class="select-language" value="afrikaans" class="-1">
+                        <label for="">Afrikaans</label>
                     </div>
-                    <div class="">
-                        <input type="radio" id="r2" name="selectedLanguage" class="select-language" value="setswana">
+                    <div class="col-4">
+                        <input type="radio" id="r2" name="selectedLanguage" class="select-language" value="setswana" class="radio-2">
                         <label for="">Setswana</label>
                     </div>
                                     
@@ -50,8 +52,8 @@
                 
                     <div class="buttons">
                         <div class="">
-                            <button class="button-primary greetingsBtn">Greeting Me</button>
-                        </div>.
+                            <button class="button-primary greetingsBtn">Greet Me</button>
+                        </div>
                         <div class="reset">
                             <button class="button-primary resettingBtn">Reset</button>
                         </div>
@@ -67,7 +69,7 @@
         </div>         
     </div>
     <div class="footer">
-               @2021 Ishmael
+               
     </div>
     <script src="factory/greetingFactory.js" charset="utf-8"></script>
     <script src="greetings/greet.js" charset="utf-8"></script>

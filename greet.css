@@ -16,7 +16,7 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background-color: #101820ff;
+  background-color:  #fcf951ff;
   overflow: hidden;
   
 }
@@ -31,9 +31,7 @@ button{
 .nameInput{
     padding-top: 25px;
 }
-.languages{
-  width: 500px;
-}
+
 
 /* ROOT FONT STYLES */
 
@@ -114,30 +112,29 @@ p {
 
 /* ==== GRID SYSTEM ==== */
 
-.container {
-  margin-top: 10%;
-  border-radius: 50%;
-  width: 80%;
-  border:solid #fcf951ff;
-  background-color: yellow; 
+.container {  
+  width: 80%;    
   margin-left: 10%;
   margin-right: 10%;
-}
-.inContainer{  
-  width: 65%;
-  border-radius: 25%;
-  background-color: #00b1d2ff;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 17.5%;
-  margin-right: 17.5%;
-  border: solid #fcf951ff;
+  overflow: hidden;
 }
 .enterName{
   display: flex;
+  margin-left: 2%;
+}
+.counter{
+  color: rgb(19, 19, 65);
+}
+.myCounter{
+  margin-left: 20%;
+  padding-top: 1.3em;
 }
 .buttons{
-  display: flex;  
+  width: 70%;
+  display: flex; 
+  
+  margin-bottom: 5%; 
+  margin-top: 2%;
 }
 .nameInput{
  margin-left: 15%;
@@ -149,18 +146,26 @@ p {
   margin:0 0;
 }
 .reset{
-  margin-left: 30%;
+  margin-left: 50%;
 }
 .box{
   margin-left: 30%;  
 }
 .languages{
-  display: flex;
-  width: 100%;
+ 
+  width: 60%;
+  justify-content: space-between;
+  
 }
 .row {
   position: relative;
   width: 40%;
+}
+.radio-1{
+  margin-left: 2%;
+}
+.radio-2{
+  margin-left: 2%;
 }
 
 .row [class^="col"] {
@@ -175,7 +180,7 @@ p {
 .footer{
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
+  
   margin-top: 8%;
   margin-left: 2%;
   margin-right: 2%;
@@ -260,6 +265,7 @@ p {
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {
     width: 80%;
+    overflow: hidden;
   }
   .header{
     margin-left: 5%;
@@ -275,26 +281,11 @@ p {
   .header{
     margin-left: 5%;
   }
-  .box{
-    width: 80%;
-    margin-left: 10%;  
-    margin-right: 10%;
-  }
+  
   .col-1 {
     width: 4.33%;
   }
-
-  .col-2 {
-    width: 12.66%;
-  }
-
-  .col-3 {
-    width: 21%;
-  }
-
-  .col-4 {
-    width: 29.33%;
-  }
+  
 
   .col-5 {
     width: 37.66%;
@@ -366,23 +357,12 @@ p {
 }
 @media (min-width:662px){
   .container {
-    margin-top: 10%;
-    border-radius: 50%;
-    width: 80%;
-    border:solid #fcf951ff;
-    background-color: yellow; 
+       
+    width: 80%; 
     margin-left: 10%;
     margin-right: 10%;
   }
-  .inContainer{  
-    width: 65%;
-    border-radius: 25%;
-    background-color: #00b1d2ff;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 17.5%;
-    border: solid #fcf951ff;
-  }
+  
   .header{
     margin-left: 5%;
   }
@@ -396,9 +376,7 @@ p {
     width: 50%;
     margin: 0 10%;
   }
-  .inContainer{  
-    width: 100%;       
-  }
+  
   .box{
     width: 80%;
     margin-left: 0%;  
@@ -410,9 +388,7 @@ p {
     width: 50%;
     margin: 0 10%;
   }  
-  .inContainer{  
-    width: 100%;       
-  }
+  
   .box{
     width: 80%;
     margin-left: 10%;  
@@ -420,21 +396,18 @@ p {
   }
 }
 @media (max-width:662px){  
-  .container {
-    margin-top: 10%;
-    border-radius: 50%;
-    width: 80%;    
+  .container {    
+    width: 80%;  
     
   }
-  .inContainer{  
-    width: 65%;    
-  }
+  
   .header{
     margin:0 0;
   }
   .buttons{
     display: flex;  
     flex-direction: column;
+    margin-bottom: 10%;
   }
   .enterName{
     display: flex;
@@ -455,26 +428,15 @@ p {
 }
 @media (min-width: 992px){
   .container {
-    margin-top: 10%;
-    border-radius: 50%;
-    width: 80%;
-    border:solid #fcf951ff;
-    background-color: yellow; 
+        
+    width: 80%;   
     margin-left: 10%;
     margin-right: 10%;
   }
   .header{
     margin-left: 5%;
   }
-  .inContainer{  
-    width: 65%;
-    border-radius: 25%;
-    background-color: #00b1d2ff;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 17.5%;
-    border: solid #fcf951ff;
-  }
+  
   .enterName{
     display: flex;
   }
@@ -498,6 +460,6 @@ p {
   }
   .languages{
     display: flex;
-    width: 100%;
+    width: 100%;    
   }
 }
