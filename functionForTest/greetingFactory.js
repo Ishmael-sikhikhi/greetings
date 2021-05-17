@@ -8,6 +8,7 @@ function greetingsFactory(myLocal){
     
     function setLanguage(language,theName){
         //errors when information is not correct
+        
         if(!language && !theName){
             return 'Please enter the name and select language' 
         }
