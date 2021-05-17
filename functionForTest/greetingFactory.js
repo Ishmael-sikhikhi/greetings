@@ -3,7 +3,7 @@ function greetingsFactory(myLocal){
     var counter = 0;    
     var greetName = {} 
     var greetName =  myLocal
-      
+
     const digits = /[0-9]/    
     
     function setLanguage(language,theName){
@@ -24,15 +24,9 @@ function greetingsFactory(myLocal){
             if(!greetName[theName.trim()] && theName !=''){
                 greetName[theName.trim()]++                              
             }         
-        }
-        
-        if(!theName){
-            return "Please enter name"
-        }
+        }        
 
-        else if (!language){
-            return 'Please select language'
-        }
+        
         if(language === 'english' && theName !== ''){
             return 'Hello'+', '+theName    
         }

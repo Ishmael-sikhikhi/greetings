@@ -20,6 +20,18 @@ body {
   overflow: hidden;
   
 }
+.myheading{
+  margin-right: 60%;
+}
+.inContainer{
+  /* text-align: center; */
+  width: 80%;
+  margin-left: 30%;
+ 
+}
+.box{  
+  margin-left: 20%;    
+}
 
 button{
   border-radius:8px;
@@ -97,6 +109,9 @@ p {
 .header{
   margin:0 0;
 }
+.myHeader{
+  margin-right: 10%;
+}
 .center {
   text-align: center;
   margin-left: auto;
@@ -113,12 +128,14 @@ p {
 /* ==== GRID SYSTEM ==== */
 
 .container {  
-  width: 100%;    
+  /* text-align: center; */
+  width: 80%;    
   margin-left: 10%;
   margin-right: 10%;
   overflow: hidden;
 }
 .enterName{
+  width: 30%;
   display: flex;
   margin-left: 2%;
 }
@@ -126,7 +143,7 @@ p {
   color: rgb(19, 19, 65);
 }
 .myCounter{
-  margin-left: 20%;
+  margin-left: 15%;
   padding-top: 1.3em;
 }
 .buttons{
@@ -136,11 +153,16 @@ p {
   margin-bottom: 5%; 
   margin-top: 2%;
 }
+.reset button, .grtbtn button{
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .nameInput{
- margin-left: 15%;
+ margin-left: 0px;
 }
 .behind{ 
-  margin-right: 10%;
+  margin-right: 100%;
 }
 .storedNames{  
   margin:0 0;
@@ -151,11 +173,9 @@ p {
 .box{
   margin-left: 30%;  
 }
-.languages{
- 
-  width: 60%;
-  justify-content: space-between;
-  
+
+.r1, .r2 {
+  margin-left: 5%;
 }
 .row {
   position: relative;
@@ -166,6 +186,10 @@ p {
 }
 .radio-2{
   margin-left: 2%;
+}
+.r, .r1, .r2 {
+  margin-bottom: 5%;
+  margin-top: 3%;
 }
 
 .row [class^="col"] {
@@ -357,7 +381,7 @@ p {
 }
 @media (min-width:662px){
   .container {
-       
+    text-align: center;   
     width: 80%; 
     margin-left: 10%;
     margin-right: 10%;
@@ -422,7 +446,7 @@ p {
     margin:0 0 20px 0;
    }
    .behind{ 
-    margin-right: 10%;
+    margin-right: 100%;
   }
   
 }
@@ -447,7 +471,7 @@ p {
    margin-left: 15%;
   }
   .behind{ 
-    margin-right: 10%;
+    margin-right: 50%;
   }
   .storedNames{  
     margin:0 0;
