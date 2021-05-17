@@ -1,8 +1,8 @@
-function greetingsFactory(){
+function greetingsFactory(myLocal){
     var theLanguage = ''
     var counter = 0;    
-    var namesArray = []
     var greetName = {} 
+    var greetName =  myLocal
       
     const digits = /[0-9]/    
     

@@ -1,3 +1,4 @@
+// DOM elements
 let nameElement = document.querySelector('.enteredName')
 let greetingBtn = document.querySelector('.greetingsBtn')
 let resettingBtn = document.querySelector('.resettingBtn')
