@@ -8,15 +8,14 @@ function greetingsFactory(myLocal){
     
     function setLanguage(language,theName){
         //errors when information is not correct
-        
+
         if(!language && !theName){
             return 'Please enter the name and select language' 
         }
         else if (language && !theName.match(digits)){
         theName = theName.charAt(0).toUpperCase() + theName.slice(1).toLowerCase()
         }
-        
-        /* object fill or refill */ 
+                /* object fill or refill */ 
 
         if(greetName[theName.trim()] == undefined && theName !='' && !theName.match(digits)){            
             greetName[theName.trim()] = 0            
