@@ -3,7 +3,7 @@ function greetingsFactory(){
     var counter = 0;    
     var namesArray = []
     var greetName = {} 
-    const regex = /[a-zA-Z]/   
+      
     const digits = /[0-9]/    
     
     function setLanguage(language,theName){

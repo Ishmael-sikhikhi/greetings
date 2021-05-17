@@ -18,6 +18,7 @@ let factoryInstance = greetingsFactory(myLocal)
 var selectLanguage = ''
 var myObj = {}
 
+
 function greetings(){
     let name = nameElement.value;
     checkedRadioBtn = document.querySelector("input[name='selectedLanguage']:checked")
