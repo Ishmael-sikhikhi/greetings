@@ -148,8 +148,7 @@ p {
 }
 .buttons{
   width: 70%;
-  display: flex; 
-  
+  display: flex;   
   margin-bottom: 5%; 
   margin-top: 2%;
 }
@@ -386,13 +385,31 @@ p {
     margin-left: 10%;
     margin-right: 10%;
   }
-  
+  .languages{
+    display: flex;
+    width: 100%;
+  }
   .header{
     margin-left: 5%;
-  }
-  
+  }  
 }
 /* 425 */
+@media (max-width: 662px){
+  .languages{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .r, .r1, .r2{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .behind{ 
+    margin-right: 800%;
+  }
+}
+
 @media (max-width:425px) and (min-width: 100px){
   
   .header{
@@ -407,6 +424,8 @@ p {
     margin-right: 0%;
   }
 }
+
+
 @media (max-width:572px){
   .header{
     width: 50%;
@@ -418,11 +437,25 @@ p {
     margin-left: 10%;  
     margin-right: 10%;
   }
+  .languages{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .buttons{
+    width: 100%;
+    display: flex;   
+    flex-direction: column;
+  }
+  button{
+    padding: 10px;
+  }
 }
-@media (max-width:662px){  
+
+@media (min-width:572pxpx){  
   .container {    
-    width: 80%;  
-    
+    width: 80%;      
   }
   
   .header{
@@ -430,18 +463,17 @@ p {
   }
   .buttons{
     display: flex;  
-    flex-direction: column;
     margin-bottom: 10%;
+  }
+  .r, .r1, .r2{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .enterName{
     display: flex;
-    flex-direction: column;
   }
-  .languages{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+  
   .nameInput{
     margin:0 0 20px 0;
    }
