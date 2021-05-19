@@ -1,14 +1,13 @@
-function greetingsFactory(myLocal){
+function greetingsFactory(){
     var theLanguage = ''
     var counter = 0;    
-    var greetName = {} 
-    var greetName =  myLocal
+    var greetName = {}     
 
     const digits = /[0-9]/    
     
     function setLanguage(language,theName){
         //errors when information is not correct
-
+        
         if(!language && !theName){
             return 'Please enter the name and select language' 
         }
