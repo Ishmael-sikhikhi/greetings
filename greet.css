@@ -1,7 +1,7 @@
-/**
-*** SIMPLE GRID
-*** (C) ZACH COLE 2016
-**/
+/* 
+  SIMPLE GRID
+  (C) ZACH COLE 2016 
+*/
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
@@ -16,34 +16,9 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background-color:  #fcf951ff;
+  background-color: #fcf951ff;
   overflow: hidden;
-  
 }
-.myheading{
-  margin-right: 60%;
-}
-.inContainer{
-  /* text-align: center; */
-  width: 80%;
-  margin-left: 30%;
- 
-}
-.box{  
-  margin-left: 20%;    
-}
-
-button{
-  border-radius:8px;
-  background-color: rgb(1, 4, 24);
-  color: #fff;
-  padding: 2px;
-  margin: auto;
-  }
-.nameInput{
-    padding-top: 25px;
-}
-
 
 /* ROOT FONT STYLES */
 
@@ -106,12 +81,7 @@ p {
 .right {
   text-align: right;
 }
-.header{
-  margin:0 0;
-}
-.myHeader{
-  margin-right: 10%;
-}
+
 .center {
   text-align: center;
   margin-left: auto;
@@ -121,74 +91,18 @@ p {
 .justify {
   text-align: justify;
 }
-.enteredName{
-  clear: both;
-}
 
 /* ==== GRID SYSTEM ==== */
 
-.container {  
-  /* text-align: center; */
-  width: 80%;    
-  margin-left: 10%;
-  margin-right: 10%;
+.container {
+  width: 80%;
+  margin: 0 auto;
   overflow: hidden;
 }
-.enterName{
-  width: 30%;
-  display: flex;
-  margin-left: 2%;
-}
-.counter{
-  color: rgb(19, 19, 65);
-}
-.myCounter{
-  margin-left: 15%;
-  padding-top: 1.3em;
-}
-.buttons{
-  width: 70%;
-  display: flex;   
-  margin-bottom: 5%; 
-  margin-top: 2%;
-}
-.reset button, .grtbtn button{
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.nameInput{
- margin-left: 0px;
-}
-.behind{ 
-  margin-right: 100%;
-}
-.storedNames{  
-  margin:0 0;
-}
-.reset{
-  margin-left: 50%;
-}
-.box{
-  margin-left: 30%;  
-}
 
-.r1, .r2 {
-  margin-left: 5%;
-}
 .row {
   position: relative;
-  width: 40%;
-}
-.radio-1{
-  margin-left: 2%;
-}
-.radio-2{
-  margin-left: 2%;
-}
-.r, .r1, .r2 {
-  margin-bottom: 5%;
-  margin-top: 3%;
+  width: 100%;
 }
 
 .row [class^="col"] {
@@ -196,20 +110,10 @@ p {
   margin: 0.5rem 2%;
   min-height: 0.125rem;
 }
+
 .clearfix {
   overflow: auto;
   zoom: 1;
-}
-.footer{
-  display: flex;
-  justify-content: space-between;
-  
-  margin-top: 8%;
-  margin-left: 2%;
-  margin-right: 2%;
-  font-style: oblique;
-  padding-left: 2%;
-  padding-right: 2%;
 }
 
 .col-1,
@@ -285,30 +189,17 @@ p {
   display: none;
 }
 
-@media only screen and (min-width: 33.75em) {  /* 540px */
+/* ==== RESPONSIVE GRID ==== */
+
+@media only screen and (min-width: 33.75em) { /* 540px */
   .container {
     width: 80%;
     overflow: hidden;
   }
-  .header{
-    margin-left: 5%;
-  }
-  .box{
-    width: 80%;
-    margin-left: 10%;  
-    margin-right: 10%;
-  }
-}
 
-@media only screen and (min-width: 45em) {  /* 720px */
-  .header{
-    margin-left: 5%;
-  }
-  
   .col-1 {
     width: 4.33%;
   }
-  
 
   .col-5 {
     width: 37.66%;
@@ -347,175 +238,304 @@ p {
   }
 }
 
-@media only screen and (min-width: 60em) { /* 960px */
+@media only screen and (min-width: 45em) { /* 720px */
   .container {
     width: 75%;
     max-width: 60rem;
   }
-  .header{
-    margin-left: 5%;
-  }
-  .box{
-    width: 80%;
-    margin-left: 10%;  
-    margin-right: 10%;
-  }
 }
-/*  */
-.col-4 churchsquare img{
+
+/* ==== ADDITIONAL COMPONENTS ==== */
+
+.myheading {
+  margin-right: 60%;
+}
+
+.inContainer {
+  width: 80%;
+  margin-left: 30%;
+}
+
+.box {
+  margin-left: 20%;
+}
+
+button {
+  border-radius: 8px;
+  background-color: rgb(1, 4, 24);
+  color: #fff;
+  padding: 2px;
+  margin: auto;
+}
+
+.nameInput {
+  padding-top: 25px;
+}
+
+.header {
+  margin: 0 0;
+}
+
+.myHeader {
+  margin-right: 10%;
+}
+
+.enteredName {
+  clear: both;
+}
+
+.enterName {
+  width: 30%;
+  display: flex;
+  margin-left: 2%;
+}
+
+.counter {
+  color: rgb(19, 19, 65);
+}
+
+.myCounter {
+  margin-left: 15%;
+  padding-top: 1.3em;
+}
+
+.buttons {
+  width: 70%;
+  display: flex;
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+
+.reset button,
+.grtbtn button {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nameInput {
+  margin-left: 0px;
+}
+
+.behind {
+  margin-right: 100%;
+}
+
+.storedNames {
+  margin: 0 0;
+}
+
+.reset {
+  margin-left: 50%;
+}
+
+.r1,
+.r2 {
+  margin-left: 5%;
+}
+
+.r,
+.r1,
+.r2 {
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.radio-1 {
+  margin-left: 2%;
+}
+
+.radio-2 {
+  margin-left: 2%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8%;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-style: oblique;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.col-4.churchsquare img {
   float: right;
   padding: 15px;
 }
-.lab{
-    margin-right: 80%;
+
+.lab {
+  margin-right: 80%;
 }
-.error{
+
+.error {
   color: crimson;
 }
-.warning{
+
+.warning {
   color: coral;
 }
-.good{
+
+.good {
   color: green;
 }
-@media (min-width:662px){
+
+/* ==== RESPONSIVE STYLES ==== */
+
+@media (min-width: 662px) {
   .container {
-    text-align: center;   
-    width: 80%; 
+    text-align: center;
+    width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
-  .languages{
+
+  .languages {
     display: flex;
     width: 100%;
   }
-  .header{
-    margin-left: 5%;
-  }  
 }
-/* 425 */
-@media (max-width: 662px){
-  .languages{
+
+@media (max-width: 662px) {
+  .languages {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  .r, .r1, .r2{
+
+  .r,
+  .r1,
+  .r2 {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
-  .behind{ 
+
+  .behind {
     margin-right: 800%;
   }
 }
 
-@media (max-width:425px) and (min-width: 100px){
-  
-  .header{
+@media (max-width: 425px) and (min-width: 100px) {
+  .header {
     font-size: 1000;
     width: 50%;
     margin: 0 10%;
   }
-  
-  .box{
+
+  .box {
     width: 80%;
-    margin-left: 0%;  
+    margin-left: 0%;
     margin-right: 0%;
   }
 }
 
-
-@media (max-width:572px){
-  .header{
+@media (max-width: 572px) {
+  .header {
     width: 50%;
     margin: 0 10%;
-  }  
-  
-  .box{
+  }
+
+  .box {
     width: 80%;
-    margin-left: 10%;  
+    margin-left: 10%;
     margin-right: 10%;
   }
-  .languages{
+
+  .languages {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  
-  .buttons{
+
+  .buttons {
     width: 100%;
-    display: flex;   
+    display: flex;
     flex-direction: column;
   }
-  button{
+
+  button {
     padding: 10px;
   }
 }
 
-@media (min-width:572pxpx){  
-  .container {    
-    width: 80%;      
+@media (min-width: 572px) {
+  .container {
+    width: 80%;
   }
-  
-  .header{
-    margin:0 0;
+
+  .header {
+    margin: 0 0;
   }
-  .buttons{
-    display: flex;  
+
+  .buttons {
+    display: flex;
     margin-bottom: 10%;
   }
-  .r, .r1, .r2{
+
+  .r,
+  .r1,
+  .r2 {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
-  .enterName{
+
+  .enterName {
     display: flex;
   }
-  
-  .nameInput{
-    margin:0 0 20px 0;
-   }
-   .behind{ 
+
+  .nameInput {
+    margin: 0 0 20px 0;
+  }
+
+  .behind {
     margin-right: 100%;
   }
-  
 }
-@media (min-width: 992px){
+
+@media (min-width: 992px) {
   .container {
-        
-    width: 80%;   
+    width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
-  .header{
+
+  .header {
     margin-left: 5%;
   }
-  
-  .enterName{
+
+  .enterName {
     display: flex;
   }
-  .buttons{
-    display: flex;  
+
+  .buttons {
+    display: flex;
   }
-  .nameInput{
-   margin-left: 15%;
+
+  .nameInput {
+    margin-left: 15%;
   }
-  .behind{ 
+
+  .behind {
     margin-right: 50%;
   }
-  .storedNames{  
-    margin:0 0;
+
+  .storedNames {
+    margin: 0 0;
   }
-  .reset{
+
+  .reset {
     margin-left: 30%;
   }
-  .box{
-    margin-left: 30%;  
+
+  .box {
+    margin-left: 30%;
   }
-  .languages{
+
+  .languages {
     display: flex;
-    width: 100%;    
+    width: 100%;
   }
 }
